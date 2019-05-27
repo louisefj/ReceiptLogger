@@ -65,6 +65,28 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func continueTapped(_ sender: Any) {
+        guard let firstName = firstNameTextField.text else { return }
+        guard let lastName = lastNameTextField.text else { return }
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        //let continueButton = sender as? UIButton
+       // continueButton?.setTitle("", for: .normal)
+        
+       // loadingIndicatorView.startAnimating()
+        
+        FBManager.instance.createUser(withFirstName: firstName, lastName: lastName, email: email, password: password) { (success) in
+            if success {
+                //self.loadingIndicatorView.stopAnimating()
+                self.performSegue(withIdentifier: "SignUpSuccessfulSegue", sender: self)
+            } else {
+                print("Error creating user")
+                //self.loadingIndicatorView.stopAnimating()
+                //continueButton?.setTitle("Continue", for: .normal)
+            }
+        }
+    }
     @IBAction func cancelTapped(_ sender: Any) {
          dismiss(animated: true, completion: nil)
     }

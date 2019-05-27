@@ -79,9 +79,9 @@ class FBManager {
                 try Auth.auth().signOut()
                 //logoutTasks()
                 let main = UIStoryboard(name: "Main", bundle: nil)
-                //let logoViewController = main.instantiateViewController(withIdentifier: "LogoVC")
+                let logoViewController = main.instantiateViewController(withIdentifier: "LogoVC")
                 let delegate = UIApplication.shared.delegate as! AppDelegate
-                //delegate.window?.rootViewController = logoViewController
+                delegate.window?.rootViewController = logoViewController
             } catch let error as NSError {
                 print("Error logging out \(error.localizedDescription)")
             }
@@ -90,14 +90,14 @@ class FBManager {
     
     func populateUserInfo(completion: @escaping () -> ()) {
         print("Populating user info")
-//        DBManager.instance.REF_USERS.child(FBManager.instance.userID).observeSingleEvent(of: .value, with: { (snapshot) in
-//            let userData = snapshot.value as? NSDictionary
-//            let firstName = userData?["first name"] as? String ?? ""
-//            let lastName = userData?["last name"] as? String ?? ""
-//
-//            self.userInfo = UserInfo(firstName: firstName, lastName: lastName)
-//            completion()
-//        })
+        DBManager.instance.REF_USERS.child(FBManager.instance.userID).observeSingleEvent(of: .value, with: { (snapshot) in
+            let userData = snapshot.value as? NSDictionary
+            let firstName = userData?["first name"] as? String ?? ""
+            let lastName = userData?["last name"] as? String ?? ""
+
+            self.userInfo = UserInfo(firstName: firstName, lastName: lastName)
+            completion()
+        })
     }
     
     
