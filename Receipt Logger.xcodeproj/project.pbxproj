@@ -16,7 +16,7 @@
 		B7D088E1229B97DE005A9595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D088DF229B97DE005A9595 /* LaunchScreen.storyboard */; };
 		B7D088EC229B97DF005A9595 /* Receipt_LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D088EB229B97DF005A9595 /* Receipt_LoggerTests.swift */; };
 		B7D088F7229B97DF005A9595 /* Receipt_LoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D088F6229B97DF005A9595 /* Receipt_LoggerUITests.swift */; };
-		B7D08905229B9A96005A9595 /* GoogleService-Info(1).plist in Resources */ = {isa = PBXBuildFile; fileRef = B7D08904229B9A96005A9595 /* GoogleService-Info(1).plist */; };
+		B7D08907229B9EAE005A9595 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7D08906229B9EAE005A9595 /* GoogleService-Info.plist */; };
 		BF1354066D2420242CED812E /* Pods_Receipt_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1B8CFEB0A94D89FFFF4CE /* Pods_Receipt_Logger.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +59,7 @@
 		B7D088F2229B97DF005A9595 /* Receipt LoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Receipt LoggerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D088F6229B97DF005A9595 /* Receipt_LoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt_LoggerUITests.swift; sourceTree = "<group>"; };
 		B7D088F8229B97DF005A9595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7D08904229B9A96005A9595 /* GoogleService-Info(1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info(1).plist"; path = "../../../../Downloads/GoogleService-Info(1).plist"; sourceTree = "<group>"; };
+		B7D08906229B9EAE005A9595 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7BE3B0CB68117E26D602D98 /* Pods-Receipt LoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Receipt LoggerTests.release.xcconfig"; path = "Target Support Files/Pods-Receipt LoggerTests/Pods-Receipt LoggerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +111,6 @@
 				AAD040EE606913BBB3EDF1F8 /* Pods-Receipt LoggerUITests.debug.xcconfig */,
 				3DC9E6F706B7DBCEDA2317D3 /* Pods-Receipt LoggerUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,7 +145,7 @@
 				B7D088DD229B97DE005A9595 /* Assets.xcassets */,
 				B7D088DF229B97DE005A9595 /* LaunchScreen.storyboard */,
 				B7D088E2229B97DE005A9595 /* Info.plist */,
-				B7D08904229B9A96005A9595 /* GoogleService-Info(1).plist */,
+				B7D08906229B9EAE005A9595 /* GoogleService-Info.plist */,
 			);
 			path = "Receipt Logger";
 			sourceTree = "<group>";
@@ -278,8 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D088E1229B97DE005A9595 /* LaunchScreen.storyboard in Resources */,
+				B7D08907229B9EAE005A9595 /* GoogleService-Info.plist in Resources */,
 				B7D088DE229B97DE005A9595 /* Assets.xcassets in Resources */,
-				B7D08905229B9A96005A9595 /* GoogleService-Info(1).plist in Resources */,
 				B7D088DC229B97D9005A9595 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
