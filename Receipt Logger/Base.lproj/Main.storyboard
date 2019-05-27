@@ -13,7 +13,7 @@
         <!--Logo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LogoViewController" customModule="Receipt_Logger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogoVC" id="BYZ-38-t0r" customClass="LogoViewController" customModule="Receipt_Logger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
         <!--Log In View Controller-->
         <scene sceneID="coO-cz-Xg3">
             <objects>
-                <viewController storyboardIdentifier="LogoVC" id="KOf-9j-p7G" customClass="LogInViewController" customModule="Receipt_Logger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KOf-9j-p7G" customClass="LogInViewController" customModule="Receipt_Logger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C1K-cG-Vwo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +154,7 @@
         <!--History-->
         <scene sceneID="Z0s-WR-vgb">
             <objects>
-                <viewController id="F5H-Ws-Gfj" sceneMemberID="viewController">
+                <viewController id="F5H-Ws-Gfj" customClass="HistoryViewController" customModule="Receipt_Logger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tct-Xl-O0x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +180,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1695585251" green="0.28171703219999999" blue="0.44469070430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="120" id="KEs-n5-7vV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="120" id="KEs-n5-7vV" customClass="CategoryCell" customModule="Receipt_Logger" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KEs-n5-7vV" id="Ccj-vk-415">
@@ -224,6 +224,11 @@
                                                 <constraint firstItem="Kgx-3O-spP" firstAttribute="top" secondItem="Ccj-vk-415" secondAttribute="top" constant="48" id="pvG-cZ-xhz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryName" destination="wpE-ME-FPE" id="Wdm-OG-drI"/>
+                                            <outlet property="numReceipts" destination="yn6-c6-SdU" id="vBD-2Y-ayj"/>
+                                            <outlet property="tapIn" destination="Kgx-3O-spP" id="0F5-d1-m0R"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -232,6 +237,9 @@
                         <viewLayoutGuide key="safeArea" id="3rt-O9-QyK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Receipts" id="u4y-Xd-t2U"/>
+                    <connections>
+                        <outlet property="tableView" destination="vUX-eA-pGP" id="ak7-ya-SAy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0M-fj-25b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,6 +252,9 @@
                     <navigationItem key="navigationItem" id="2mf-BB-XlN">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="2g6-7n-tzE">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="n4q-6p-c5i" kind="show" id="9ij-Xv-Ec1"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="EPF-U8-sb3">
@@ -260,6 +271,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54h-Kt-4F8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2284" y="818"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="L1Q-sG-Eap">
+            <objects>
+                <viewController id="n4q-6p-c5i" customClass="SettingsViewController" customModule="Receipt_Logger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xlo-SE-RBK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyd-Xn-mfe" customClass="RoundedButton" customModule="Receipt_Logger" customModuleProvider="target">
+                                <rect key="frame" x="50" y="503" width="275" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yFS-Qw-cyh"/>
+                                </constraints>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.1169350962" green="0.28189903849999998" blue="0.25403846149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLogout:" destination="n4q-6p-c5i" eventType="touchUpInside" id="SeR-4t-l4d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gPo-NC-WKJ" firstAttribute="bottom" secondItem="Iyd-Xn-mfe" secondAttribute="bottom" constant="50" id="iA7-fK-5X0"/>
+                            <constraint firstItem="Iyd-Xn-mfe" firstAttribute="leading" secondItem="gPo-NC-WKJ" secondAttribute="leading" constant="50" id="qOU-4k-WFX"/>
+                            <constraint firstItem="gPo-NC-WKJ" firstAttribute="trailing" secondItem="Iyd-Xn-mfe" secondAttribute="trailing" constant="50" id="uzT-RR-Ooi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gPo-NC-WKJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="aY9-pQ-qGk"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="Iyd-Xn-mfe" id="3ND-rU-QWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLo-OS-2Ac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3161" y="818"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IBk-Vv-KOD">
@@ -394,6 +444,6 @@
         <image name="forward icon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aYK-G5-NwS"/>
+        <segue reference="Oyh-um-y2B"/>
     </inferredMetricsTieBreakers>
 </document>

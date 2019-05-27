@@ -26,6 +26,9 @@
 		B7D08915229BB31F005A9595 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D08914229BB31F005A9595 /* UnderlinedTextField.swift */; };
 		B7D08917229BC04B005A9595 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D08916229BC04B005A9595 /* LogInViewController.swift */; };
 		B7D08919229BCE94005A9595 /* ReceiptCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D08918229BCE94005A9595 /* ReceiptCategoriesViewController.swift */; };
+		B7D0891B229BD924005A9595 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0891A229BD924005A9595 /* SettingsViewController.swift */; };
+		B7D0891D229BD939005A9595 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0891C229BD939005A9595 /* HistoryViewController.swift */; };
+		B7D0891F229C43A8005A9595 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0891E229C43A8005A9595 /* CategoryCell.swift */; };
 		BF1354066D2420242CED812E /* Pods_Receipt_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1B8CFEB0A94D89FFFF4CE /* Pods_Receipt_Logger.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,9 @@
 		B7D08914229BB31F005A9595 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		B7D08916229BC04B005A9595 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		B7D08918229BCE94005A9595 /* ReceiptCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCategoriesViewController.swift; sourceTree = "<group>"; };
+		B7D0891A229BD924005A9595 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B7D0891C229BD939005A9595 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		B7D0891E229C43A8005A9595 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		D7BE3B0CB68117E26D602D98 /* Pods-Receipt LoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Receipt LoggerTests.release.xcconfig"; path = "Target Support Files/Pods-Receipt LoggerTests/Pods-Receipt LoggerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +179,9 @@
 				B7D08910229BB22A005A9595 /* SignUpViewController.swift */,
 				B7D08916229BC04B005A9595 /* LogInViewController.swift */,
 				B7D08918229BCE94005A9595 /* ReceiptCategoriesViewController.swift */,
+				B7D0891A229BD924005A9595 /* SettingsViewController.swift */,
+				B7D0891C229BD939005A9595 /* HistoryViewController.swift */,
+				B7D0891E229C43A8005A9595 /* CategoryCell.swift */,
 			);
 			path = "Receipt Logger";
 			sourceTree = "<group>";
@@ -435,7 +444,9 @@
 				B7D08919229BCE94005A9595 /* ReceiptCategoriesViewController.swift in Sources */,
 				B7D088D9229B97D9005A9595 /* ViewController.swift in Sources */,
 				B7D08911229BB22A005A9595 /* SignUpViewController.swift in Sources */,
+				B7D0891F229C43A8005A9595 /* CategoryCell.swift in Sources */,
 				B7D0890F229BA986005A9595 /* RoundedButton.swift in Sources */,
+				B7D0891D229BD939005A9595 /* HistoryViewController.swift in Sources */,
 				B7D08909229BA224005A9595 /* FBManager.swift in Sources */,
 				B7D08915229BB31F005A9595 /* UnderlinedTextField.swift in Sources */,
 				B7D0890D229BA7ED005A9595 /* LogoViewController.swift in Sources */,
@@ -443,6 +454,7 @@
 				B7D0890B229BA531005A9595 /* DBManager.swift in Sources */,
 				B7D08917229BC04B005A9595 /* LogInViewController.swift in Sources */,
 				B7D08913229BB2C4005A9595 /* SFTextFieldProps.swift in Sources */,
+				B7D0891B229BD924005A9595 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,31 @@
 
 import UIKit
 
-class ReceiptCategoriesViewController: UIViewController {
+class ReceiptCategoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CategoryCellDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as! CategoryCell
+        
+        cell.delegate = self
+        
+        return cell
+    }
+    
+    func didTapIn(for cell: CategoryCell) {
+        cell.delegate = nil
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
 
         // Do any additional setup after loading the view.
     }
