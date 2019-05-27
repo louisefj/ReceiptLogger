@@ -282,28 +282,45 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyd-Xn-mfe" customClass="RoundedButton" customModule="Receipt_Logger" customModuleProvider="target">
                                 <rect key="frame" x="50" y="503" width="275" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.1169350962" green="0.28189903849999998" blue="0.25403846149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="yFS-Qw-cyh"/>
                                 </constraints>
                                 <state key="normal" title="Logout">
-                                    <color key="titleColor" red="0.1169350962" green="0.28189903849999998" blue="0.25403846149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="onLogout:" destination="n4q-6p-c5i" eventType="touchUpInside" id="SeR-4t-l4d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opq-ZU-8Ga" customClass="RoundedButton" customModule="Receipt_Logger" customModuleProvider="target">
+                                <rect key="frame" x="50" y="50" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.1169350962" green="0.28189903849999998" blue="0.25403846149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ua9-uV-wRe"/>
+                                </constraints>
+                                <state key="normal" title="Create New Category">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCreateCategory:" destination="n4q-6p-c5i" eventType="touchUpInside" id="uSU-3g-DjO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Opq-ZU-8Ga" firstAttribute="leading" secondItem="gPo-NC-WKJ" secondAttribute="leading" constant="50" id="E2T-0S-qvK"/>
+                            <constraint firstItem="Opq-ZU-8Ga" firstAttribute="top" secondItem="gPo-NC-WKJ" secondAttribute="top" constant="50" id="aHs-Bh-fvG"/>
                             <constraint firstItem="gPo-NC-WKJ" firstAttribute="bottom" secondItem="Iyd-Xn-mfe" secondAttribute="bottom" constant="50" id="iA7-fK-5X0"/>
                             <constraint firstItem="Iyd-Xn-mfe" firstAttribute="leading" secondItem="gPo-NC-WKJ" secondAttribute="leading" constant="50" id="qOU-4k-WFX"/>
+                            <constraint firstItem="gPo-NC-WKJ" firstAttribute="trailing" secondItem="Opq-ZU-8Ga" secondAttribute="trailing" constant="50" id="rcc-3h-Cyi"/>
                             <constraint firstItem="gPo-NC-WKJ" firstAttribute="trailing" secondItem="Iyd-Xn-mfe" secondAttribute="trailing" constant="50" id="uzT-RR-Ooi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gPo-NC-WKJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="aY9-pQ-qGk"/>
                     <connections>
+                        <outlet property="createCategoryButton" destination="Opq-ZU-8Ga" id="5DB-o4-ea4"/>
                         <outlet property="logoutButton" destination="Iyd-Xn-mfe" id="3ND-rU-QWl"/>
                     </connections>
                 </viewController>
@@ -314,7 +331,7 @@
         <!--Navigation Controller-->
         <scene sceneID="IBk-Vv-KOD">
             <objects>
-                <navigationController id="9yn-cq-l80" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavVC" id="9yn-cq-l80" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="QoN-yU-IBl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

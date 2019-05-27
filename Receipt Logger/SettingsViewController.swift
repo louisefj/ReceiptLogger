@@ -11,11 +11,12 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var logoutButton: RoundedButton!
+    @IBOutlet weak var createCategoryButton: RoundedButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoutButton.backgroundColor = UIColor.white
-        logoutButton.outlineColor = UIColor.black
+        //logoutButton.backgroundColor = UIColor.white
+        //logoutButton.outlineColor = UIColor.black
         //updateLayout()
         // Do any additional setup after loading the view.
     }
@@ -28,6 +29,12 @@ class SettingsViewController: UIViewController {
     @IBAction func onLogout(_ sender: Any) {
         FBManager.instance.logOut()
     }
+    
+    @IBAction func onCreateCategory(_ sender: Any) {
+        let addCategoryController = AddCategoryController()
+        addCategoryController.presetAlert(from: self)
+    }
+    
     /*
     // MARK: - Navigation
 

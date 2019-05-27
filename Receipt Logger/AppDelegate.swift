@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        if FBManager.instance.userIsLoggedIn {
+            FBManager.instance.populateUserInfo(completion: {
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                let homeVC = main.instantiateViewController(withIdentifier: "HomeNavVC")
+                self.window?.rootViewController = homeVC
+            })
+        }
         return true
     }
 
