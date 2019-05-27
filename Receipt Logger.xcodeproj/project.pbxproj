@@ -19,6 +19,8 @@
 		B7D08907229B9EAE005A9595 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7D08906229B9EAE005A9595 /* GoogleService-Info.plist */; };
 		B7D08909229BA224005A9595 /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D08908229BA224005A9595 /* FBManager.swift */; };
 		B7D0890B229BA531005A9595 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0890A229BA531005A9595 /* DBManager.swift */; };
+		B7D0890D229BA7ED005A9595 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0890C229BA7ED005A9595 /* LogoViewController.swift */; };
+		B7D0890F229BA986005A9595 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0890E229BA985005A9595 /* RoundedButton.swift */; };
 		BF1354066D2420242CED812E /* Pods_Receipt_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1B8CFEB0A94D89FFFF4CE /* Pods_Receipt_Logger.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		B7D08906229B9EAE005A9595 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7D08908229BA224005A9595 /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
 		B7D0890A229BA531005A9595 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		B7D0890C229BA7ED005A9595 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
+		B7D0890E229BA985005A9595 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		D7BE3B0CB68117E26D602D98 /* Pods-Receipt LoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Receipt LoggerTests.release.xcconfig"; path = "Target Support Files/Pods-Receipt LoggerTests/Pods-Receipt LoggerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,11 +151,13 @@
 				B7D0890A229BA531005A9595 /* DBManager.swift */,
 				B7D088D6229B97D9005A9595 /* AppDelegate.swift */,
 				B7D088D8229B97D9005A9595 /* ViewController.swift */,
+				B7D0890E229BA985005A9595 /* RoundedButton.swift */,
 				B7D088DA229B97D9005A9595 /* Main.storyboard */,
 				B7D088DD229B97DE005A9595 /* Assets.xcassets */,
 				B7D088DF229B97DE005A9595 /* LaunchScreen.storyboard */,
 				B7D088E2229B97DE005A9595 /* Info.plist */,
 				B7D08906229B9EAE005A9595 /* GoogleService-Info.plist */,
+				B7D0890C229BA7ED005A9595 /* LogoViewController.swift */,
 			);
 			path = "Receipt Logger";
 			sourceTree = "<group>";
@@ -361,6 +367,8 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Receipt Logger/Pods-Receipt Logger-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -370,6 +378,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -408,7 +418,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D088D9229B97D9005A9595 /* ViewController.swift in Sources */,
+				B7D0890F229BA986005A9595 /* RoundedButton.swift in Sources */,
 				B7D08909229BA224005A9595 /* FBManager.swift in Sources */,
+				B7D0890D229BA7ED005A9595 /* LogoViewController.swift in Sources */,
 				B7D088D7229B97D9005A9595 /* AppDelegate.swift in Sources */,
 				B7D0890B229BA531005A9595 /* DBManager.swift in Sources */,
 			);

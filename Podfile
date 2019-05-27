@@ -9,6 +9,8 @@ target 'Receipt Logger' do
   pod 'Firebase/Core'    
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'NVActivityIndicatorView', '~> 3.0'
   
   target 'Receipt LoggerTests' do
     inherit! :search_paths
