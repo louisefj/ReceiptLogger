@@ -21,6 +21,9 @@
 		B7D0890B229BA531005A9595 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0890A229BA531005A9595 /* DBManager.swift */; };
 		B7D0890D229BA7ED005A9595 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0890C229BA7ED005A9595 /* LogoViewController.swift */; };
 		B7D0890F229BA986005A9595 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0890E229BA985005A9595 /* RoundedButton.swift */; };
+		B7D08911229BB22A005A9595 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D08910229BB22A005A9595 /* SignUpViewController.swift */; };
+		B7D08913229BB2C4005A9595 /* SFTextFieldProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D08912229BB2C4005A9595 /* SFTextFieldProps.swift */; };
+		B7D08915229BB31F005A9595 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D08914229BB31F005A9595 /* UnderlinedTextField.swift */; };
 		BF1354066D2420242CED812E /* Pods_Receipt_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1B8CFEB0A94D89FFFF4CE /* Pods_Receipt_Logger.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +71,9 @@
 		B7D0890A229BA531005A9595 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		B7D0890C229BA7ED005A9595 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 		B7D0890E229BA985005A9595 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		B7D08910229BB22A005A9595 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B7D08912229BB2C4005A9595 /* SFTextFieldProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTextFieldProps.swift; sourceTree = "<group>"; };
+		B7D08914229BB31F005A9595 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		D7BE3B0CB68117E26D602D98 /* Pods-Receipt LoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Receipt LoggerTests.release.xcconfig"; path = "Target Support Files/Pods-Receipt LoggerTests/Pods-Receipt LoggerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,13 +157,16 @@
 				B7D0890A229BA531005A9595 /* DBManager.swift */,
 				B7D088D6229B97D9005A9595 /* AppDelegate.swift */,
 				B7D088D8229B97D9005A9595 /* ViewController.swift */,
+				B7D08912229BB2C4005A9595 /* SFTextFieldProps.swift */,
 				B7D0890E229BA985005A9595 /* RoundedButton.swift */,
+				B7D08914229BB31F005A9595 /* UnderlinedTextField.swift */,
 				B7D088DA229B97D9005A9595 /* Main.storyboard */,
 				B7D088DD229B97DE005A9595 /* Assets.xcassets */,
 				B7D088DF229B97DE005A9595 /* LaunchScreen.storyboard */,
 				B7D088E2229B97DE005A9595 /* Info.plist */,
 				B7D08906229B9EAE005A9595 /* GoogleService-Info.plist */,
 				B7D0890C229BA7ED005A9595 /* LogoViewController.swift */,
+				B7D08910229BB22A005A9595 /* SignUpViewController.swift */,
 			);
 			path = "Receipt Logger";
 			sourceTree = "<group>";
@@ -418,11 +427,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D088D9229B97D9005A9595 /* ViewController.swift in Sources */,
+				B7D08911229BB22A005A9595 /* SignUpViewController.swift in Sources */,
 				B7D0890F229BA986005A9595 /* RoundedButton.swift in Sources */,
 				B7D08909229BA224005A9595 /* FBManager.swift in Sources */,
+				B7D08915229BB31F005A9595 /* UnderlinedTextField.swift in Sources */,
 				B7D0890D229BA7ED005A9595 /* LogoViewController.swift in Sources */,
 				B7D088D7229B97D9005A9595 /* AppDelegate.swift in Sources */,
 				B7D0890B229BA531005A9595 /* DBManager.swift in Sources */,
+				B7D08913229BB2C4005A9595 /* SFTextFieldProps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

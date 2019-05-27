@@ -36,6 +36,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2z8-bu-4lQ" kind="presentation" id="YVo-RB-4oT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.11693509615384616" green="0.28189903846153846" blue="0.25403846153846155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,6 +59,112 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="LTE-rJ-oqv">
+            <objects>
+                <viewController id="2z8-bu-4lQ" customClass="SignUpViewController" customModule="Receipt_Logger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ria-em-M5L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mG-80-3gp">
+                                <rect key="frame" x="74" y="76" width="226" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-74-JjL">
+                                <rect key="frame" x="15" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="2z8-bu-4lQ" eventType="touchUpInside" id="Bt8-SH-v7W"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Srr-jU-xfa" customClass="SkyFloatingLabelTextField">
+                                <rect key="frame" x="50" y="210" width="275" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="voN-gz-8St"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a0z-Gc-526" customClass="SkyFloatingLabelTextField">
+                                <rect key="frame" x="50" y="276" width="275" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="E1C-Bn-RcW"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lxn-bx-Xar" customClass="SkyFloatingLabelTextField">
+                                <rect key="frame" x="50" y="342" width="275" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xgN-b0-ZyD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGG-HZ-t9h" customClass="RoundedButton" customModule="Receipt_Logger" customModuleProvider="target">
+                                <rect key="frame" x="50" y="567" width="275" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="faa-1d-Fae"/>
+                                </constraints>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kja-yH-z2t" customClass="SkyFloatingLabelTextField">
+                                <rect key="frame" x="50" y="144" width="275" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bUR-9X-Q9U"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1169350962" green="0.28189903849999998" blue="0.25403846149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8mG-80-3gp" firstAttribute="leading" secondItem="RMp-Mb-efC" secondAttribute="leading" constant="74" id="1vM-wz-XeY"/>
+                            <constraint firstItem="XGG-HZ-t9h" firstAttribute="leading" secondItem="RMp-Mb-efC" secondAttribute="leading" constant="50" id="3z5-k7-xIE"/>
+                            <constraint firstItem="a0z-Gc-526" firstAttribute="top" secondItem="Srr-jU-xfa" secondAttribute="bottom" constant="36" id="55o-H7-Xy5"/>
+                            <constraint firstItem="8mG-80-3gp" firstAttribute="top" secondItem="RMp-Mb-efC" secondAttribute="top" constant="56" id="77B-oc-JI5"/>
+                            <constraint firstItem="RMp-Mb-efC" firstAttribute="trailing" secondItem="kja-yH-z2t" secondAttribute="trailing" constant="50" id="8ON-dV-i0f"/>
+                            <constraint firstItem="Srr-jU-xfa" firstAttribute="leading" secondItem="RMp-Mb-efC" secondAttribute="leading" constant="50" id="Awv-qN-4gB"/>
+                            <constraint firstItem="RMp-Mb-efC" firstAttribute="trailing" secondItem="8mG-80-3gp" secondAttribute="trailing" constant="75" id="IGb-nr-oru"/>
+                            <constraint firstItem="RMp-Mb-efC" firstAttribute="trailing" secondItem="Lxn-bx-Xar" secondAttribute="trailing" constant="50" id="JNV-G2-pLh"/>
+                            <constraint firstItem="ZuT-74-JjL" firstAttribute="leading" secondItem="RMp-Mb-efC" secondAttribute="leading" constant="15" id="Nd1-8u-bml"/>
+                            <constraint firstItem="kja-yH-z2t" firstAttribute="leading" secondItem="RMp-Mb-efC" secondAttribute="leading" constant="50" id="O0M-yD-fU5"/>
+                            <constraint firstItem="ZuT-74-JjL" firstAttribute="top" secondItem="RMp-Mb-efC" secondAttribute="top" id="XkH-av-H3w"/>
+                            <constraint firstItem="RMp-Mb-efC" firstAttribute="trailing" secondItem="XGG-HZ-t9h" secondAttribute="trailing" constant="50" id="ZMS-as-8tZ"/>
+                            <constraint firstItem="RMp-Mb-efC" firstAttribute="bottom" secondItem="XGG-HZ-t9h" secondAttribute="bottom" constant="50" id="cJv-60-FTX"/>
+                            <constraint firstItem="RMp-Mb-efC" firstAttribute="trailing" secondItem="a0z-Gc-526" secondAttribute="trailing" constant="50" id="dXe-RU-e6n"/>
+                            <constraint firstItem="Lxn-bx-Xar" firstAttribute="top" secondItem="a0z-Gc-526" secondAttribute="bottom" constant="36" id="g1j-pw-aDZ"/>
+                            <constraint firstItem="Srr-jU-xfa" firstAttribute="top" secondItem="kja-yH-z2t" secondAttribute="bottom" constant="36" id="jwr-uP-RFx"/>
+                            <constraint firstItem="Lxn-bx-Xar" firstAttribute="leading" secondItem="RMp-Mb-efC" secondAttribute="leading" constant="50" id="ldk-85-8yL"/>
+                            <constraint firstItem="kja-yH-z2t" firstAttribute="top" secondItem="8mG-80-3gp" secondAttribute="bottom" constant="36" id="q8o-Zh-iBu"/>
+                            <constraint firstItem="RMp-Mb-efC" firstAttribute="trailing" secondItem="Srr-jU-xfa" secondAttribute="trailing" constant="50" id="qW3-7W-3EB"/>
+                            <constraint firstItem="a0z-Gc-526" firstAttribute="leading" secondItem="RMp-Mb-efC" secondAttribute="leading" constant="50" id="rYc-XV-ctN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RMp-Mb-efC"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="XGG-HZ-t9h" id="1wp-Yl-1CZ"/>
+                        <outlet property="emailTextField" destination="a0z-Gc-526" id="GQC-hQ-Gwg"/>
+                        <outlet property="firstNameTextField" destination="kja-yH-z2t" id="zaS-pY-qHh"/>
+                        <outlet property="lastNameTextField" destination="Srr-jU-xfa" id="nkG-F8-Bn1"/>
+                        <outlet property="passwordTextField" destination="Lxn-bx-Xar" id="rKQ-Iq-uJt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2It-0s-c9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="27"/>
         </scene>
     </scenes>
 </document>
