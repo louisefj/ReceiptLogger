@@ -8,17 +8,24 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var logoutButton: RoundedButton!
     @IBOutlet weak var createCategoryButton: RoundedButton!
+    @IBOutlet weak var picker: UIPickerView!
+    
+    var pickerData: [String] = [String]()
+    var newCategory: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //logoutButton.backgroundColor = UIColor.white
         //logoutButton.outlineColor = UIColor.black
         //updateLayout()
-        // Do any additional setup after loading the view.
+        self.picker.dataSource = self
+        self.picker.delegate = self
+       
+        pickerData = ["Grocery", "Restaurants", "Clothes", "Bills", "Ride Share", "Miscellaneous"]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,13 +33,35 @@ class SettingsViewController: UIViewController {
         //updateLayout()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.newCategory = pickerData[row]
+        //FBManager.instance.createCategory(category: newCategory) {(completion) in}
+    }
+    
     @IBAction func onLogout(_ sender: Any) {
         FBManager.instance.logOut()
     }
     
     @IBAction func onCreateCategory(_ sender: Any) {
-        let addCategoryController = AddCategoryController()
-        addCategoryController.presetAlert(from: self)
+        //let addCategoryController = AddCategoryController()
+        //addCategoryController.presetAlert(from: self)
+        FBManager.instance.createCategory(category: self.newCategory) {(completion) in}
     }
     
     /*

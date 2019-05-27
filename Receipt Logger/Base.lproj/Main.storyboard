@@ -97,7 +97,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJK-Xo-YLa" customClass="SkyFloatingLabelTextField">
                                 <rect key="frame" x="50" y="214" width="275" height="30"/>
@@ -106,7 +106,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1el-16-8Tc" customClass="RoundedButton" customModule="Receipt_Logger" customModuleProvider="target">
                                 <rect key="frame" x="50" y="567" width="275" height="50"/>
@@ -178,7 +178,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vUX-eA-pGP">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.1695585251" green="0.28171703219999999" blue="0.44469070430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="120" id="KEs-n5-7vV" customClass="CategoryCell" customModule="Receipt_Logger" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
@@ -293,8 +293,12 @@
                                     <action selector="onLogout:" destination="n4q-6p-c5i" eventType="touchUpInside" id="SeR-4t-l4d"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhy-Nh-yV2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opq-ZU-8Ga" customClass="RoundedButton" customModule="Receipt_Logger" customModuleProvider="target">
-                                <rect key="frame" x="50" y="50" width="275" height="50"/>
+                                <rect key="frame" x="50" y="224" width="275" height="50"/>
                                 <color key="backgroundColor" red="0.1169350962" green="0.28189903849999998" blue="0.25403846149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ua9-uV-wRe"/>
@@ -310,11 +314,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Opq-ZU-8Ga" firstAttribute="leading" secondItem="gPo-NC-WKJ" secondAttribute="leading" constant="50" id="E2T-0S-qvK"/>
-                            <constraint firstItem="Opq-ZU-8Ga" firstAttribute="top" secondItem="gPo-NC-WKJ" secondAttribute="top" constant="50" id="aHs-Bh-fvG"/>
                             <constraint firstItem="gPo-NC-WKJ" firstAttribute="bottom" secondItem="Iyd-Xn-mfe" secondAttribute="bottom" constant="50" id="iA7-fK-5X0"/>
+                            <constraint firstItem="Yhy-Nh-yV2" firstAttribute="leading" secondItem="Xlo-SE-RBK" secondAttribute="leading" id="jef-fT-75T"/>
+                            <constraint firstItem="Yhy-Nh-yV2" firstAttribute="centerX" secondItem="Opq-ZU-8Ga" secondAttribute="centerX" id="qGs-aD-OgU"/>
                             <constraint firstItem="Iyd-Xn-mfe" firstAttribute="leading" secondItem="gPo-NC-WKJ" secondAttribute="leading" constant="50" id="qOU-4k-WFX"/>
                             <constraint firstItem="gPo-NC-WKJ" firstAttribute="trailing" secondItem="Opq-ZU-8Ga" secondAttribute="trailing" constant="50" id="rcc-3h-Cyi"/>
+                            <constraint firstItem="Opq-ZU-8Ga" firstAttribute="top" secondItem="Yhy-Nh-yV2" secondAttribute="bottom" constant="8" id="sGt-gj-FXG"/>
                             <constraint firstItem="gPo-NC-WKJ" firstAttribute="trailing" secondItem="Iyd-Xn-mfe" secondAttribute="trailing" constant="50" id="uzT-RR-Ooi"/>
+                            <constraint firstItem="Yhy-Nh-yV2" firstAttribute="top" secondItem="gPo-NC-WKJ" secondAttribute="top" id="wOV-Qp-3iK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gPo-NC-WKJ"/>
                     </view>
@@ -322,6 +329,7 @@
                     <connections>
                         <outlet property="createCategoryButton" destination="Opq-ZU-8Ga" id="5DB-o4-ea4"/>
                         <outlet property="logoutButton" destination="Iyd-Xn-mfe" id="3ND-rU-QWl"/>
+                        <outlet property="picker" destination="Yhy-Nh-yV2" id="GvB-w0-pcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLo-OS-2Ac" userLabel="First Responder" sceneMemberID="firstResponder"/>

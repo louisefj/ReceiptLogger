@@ -36,7 +36,7 @@ class FBManager {
         get {return Auth.auth().currentUser!.uid}
     }
     
-    func createUser(withFirstName firstName: String, lastName: String, email: String, password: String, completion:@escaping (Bool) -> ()) {
+    func createUser(withFirstName firstName: String, lastName: String, email: String, password: String, category: String, completion:@escaping (Bool) -> ()) {
         Auth.auth().createUser(withEmail: email, password: password) { (authDataResult, error) in
             if error != nil {
                 print("Error signing up \(error!.localizedDescription)")
@@ -48,7 +48,7 @@ class FBManager {
                 changeRequest?.commitChanges(completion: { (error) in
                     if error == nil {
                         print("User name successfully changed")
-                        DBManager.instance.createDBUser(uid: Auth.auth().currentUser!.uid, userData: ["first name": firstName, "last name": lastName, "email": email, "password": password])
+                        DBManager.instance.createDBUser(uid: Auth.auth().currentUser!.uid, userData: ["first name": firstName, "last name": lastName, "email": email, "password": password, "categories":"categories"])
                         completion(true) // At this point VC will call perform segue
                     } else {
                         print("Error changing user name \(error!.localizedDescription)")
@@ -58,6 +58,10 @@ class FBManager {
                 })
             }
         }
+    }
+    
+    func createCategory(category: String, completion:@escaping (Bool) -> ()) {
+        DBManager.instance.createDBCategory(name: category)
     }
     
     func logIn(withEmail email: String, password: String, completion: @escaping (Bool)->()) {

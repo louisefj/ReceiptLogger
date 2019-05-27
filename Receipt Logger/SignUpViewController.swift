@@ -76,7 +76,7 @@ class SignUpViewController: UIViewController {
         
        // loadingIndicatorView.startAnimating()
         
-        FBManager.instance.createUser(withFirstName: firstName, lastName: lastName, email: email, password: password) { (success) in
+        FBManager.instance.createUser(withFirstName: firstName, lastName: lastName, email: email, password: password, category: "") { (success) in
             if success {
                 //self.loadingIndicatorView.stopAnimating()
                 self.performSegue(withIdentifier: "SignUpSuccessfulSegue", sender: self)
