@@ -6,9 +6,10 @@ target 'Receipt Logger' do
   use_frameworks!
 
   # Pods for Receipt Logger
-
-  pod 'Firebase/Core'
-
+  pod 'Firebase/Core'    
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  
   target 'Receipt LoggerTests' do
     inherit! :search_paths
     # Pods for testing

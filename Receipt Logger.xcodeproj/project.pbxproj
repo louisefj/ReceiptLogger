@@ -17,6 +17,8 @@
 		B7D088EC229B97DF005A9595 /* Receipt_LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D088EB229B97DF005A9595 /* Receipt_LoggerTests.swift */; };
 		B7D088F7229B97DF005A9595 /* Receipt_LoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D088F6229B97DF005A9595 /* Receipt_LoggerUITests.swift */; };
 		B7D08907229B9EAE005A9595 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7D08906229B9EAE005A9595 /* GoogleService-Info.plist */; };
+		B7D08909229BA224005A9595 /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D08908229BA224005A9595 /* FBManager.swift */; };
+		B7D0890B229BA531005A9595 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0890A229BA531005A9595 /* DBManager.swift */; };
 		BF1354066D2420242CED812E /* Pods_Receipt_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1B8CFEB0A94D89FFFF4CE /* Pods_Receipt_Logger.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		B7D088F6229B97DF005A9595 /* Receipt_LoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt_LoggerUITests.swift; sourceTree = "<group>"; };
 		B7D088F8229B97DF005A9595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7D08906229B9EAE005A9595 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7D08908229BA224005A9595 /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
+		B7D0890A229BA531005A9595 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D7BE3B0CB68117E26D602D98 /* Pods-Receipt LoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Receipt LoggerTests.release.xcconfig"; path = "Target Support Files/Pods-Receipt LoggerTests/Pods-Receipt LoggerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +143,8 @@
 		B7D088D5229B97D9005A9595 /* Receipt Logger */ = {
 			isa = PBXGroup;
 			children = (
+				B7D08908229BA224005A9595 /* FBManager.swift */,
+				B7D0890A229BA531005A9595 /* DBManager.swift */,
 				B7D088D6229B97D9005A9595 /* AppDelegate.swift */,
 				B7D088D8229B97D9005A9595 /* ViewController.swift */,
 				B7D088DA229B97D9005A9595 /* Main.storyboard */,
@@ -353,14 +359,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Receipt Logger/Pods-Receipt Logger-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +408,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D088D9229B97D9005A9595 /* ViewController.swift in Sources */,
+				B7D08909229BA224005A9595 /* FBManager.swift in Sources */,
 				B7D088D7229B97D9005A9595 /* AppDelegate.swift in Sources */,
+				B7D0890B229BA531005A9595 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
